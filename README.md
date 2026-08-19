@@ -1,59 +1,36 @@
-# Invitación de Boda - Mariana & Daniel
+# Invitación de Boda · Mariana & Daniel
 
-Landing page de invitación de boda con dos propuestas de diseño para presentar al cliente.
+Landing page de invitación de boda, mobile-first, con diseño artesanal estilo tarjeta formal.
 
-## Propuestas
+## Secciones
 
-### Propuesta 1: Azul Romántico Artesanal
-- Paleta de colores azul royal, plata y dorado
-- Estilo tarjeta de invitación formal con doble marco ornamental
-- Textura de papel, flores de acuarela SVG, caligrafía (Pinyon Script, Parisienne, Italiana)
-- Decoraciones artesanales: guirnalda, ramas de arrayán, divisor dorado, marco en arco
-- Secciones detalladas: ceremonia, recepción, itinerario, etiqueta con paleta de colores, regalos, RSVP
-
-### Propuesta 2: Dorado Elegante
-- Paleta de colores dorado sobre fondo oscuro
-- Estilo moderno y elegante
-- Ornamentos geométricos dorados
-
-## Funcionalidades
-
-- **Selector de propuestas**: Tabs en la parte superior para alternar entre diseños
-- **Countdown**: Temporizador regresivo hasta la fecha de la boda
-- **Botones de WhatsApp**: Para confirmar asistencia contactando al novio o novia
-- **Mapa**: Botones que detectan iOS (Apple Maps) o Android/Desktop (Google Maps)
-- **Reproductor de música**: Demo visual del player
-- **Mobile-first**: Diseño optimizado para dispositivos móviles
+1. **Portada** — sobre con sello de cera, nombres en caligrafía, fecha y ciudad
+2. **Verso** — Proverbios 18:22 con comillas ornamentales
+3. **Foto** — foto de la pareja en marco en arco
+4. **Fecha y cuenta regresiva** — countdown automático
+5. **Ceremonia y Recepción** — con botón "Ver ubicación" (detecta Apple Maps en iOS / Google Maps en Android)
+6. **Itinerario** — línea de tiempo con horarios
+7. **Etiqueta** — código de vestimenta y paleta de colores
+8. **Regalos** — lluvia de sobres / transferencia
+9. **RSVP** — botones de WhatsApp para la novia y el novio
+10. **Cierre** — agradecimiento
 
 ## Estructura
 
 ```
-├── index.html          # HTML principal con ambas propuestas
-├── styles.css          # Estilos para ambos diseños
-├── script.js           # Funcionalidades JS
+├── index.html          # Invitación completa
+├── styles.css          # Estilos responsive mobile-first
+├── script.js           # Countdown, mapas (iOS/Android), animaciones
 ├── netlify.toml        # Configuración de Netlify
 ├── _redirects          # Redirecciones Netlify
-└── img/                # Carpeta de imágenes
+└── img/                # Imágenes y decoraciones SVG
     ├── guirnalda.svg   # Guirnalda floral acuarela
     ├── flor-esquina.svg# Arreglo floral de esquina
     ├── divisor.svg     # Divisor ornamental dorado
     ├── marco-arco.svg  # Marco en arco para foto
     ├── arrayan.svg     # Rama de arrayán
-    ├── foto-pareja.jpg        # Propuesta 1
-    ├── foto-pareja-3.jpg      # Propuesta 2
-    └── foto-pareja-footer.jpg # Footer (propuesta 2)
+    └── foto-pareja.jpg # Foto de la pareja
 ```
-
-## Personalización
-
-1. Reemplazar las imágenes en la carpeta `img/`
-2. Actualizar los datos en `index.html`:
-   - Nombres de los novios (portada, sección padres, canción)
-   - Fecha de la boda (portada, sección fecha, script.js)
-   - Horarios de ceremonia y recepción
-   - Números de WhatsApp (reemplazar `591XXXXXXXX`)
-   - Direcciones de los locales
-   - Datos bancarios para regalos
 
 ## URLs
 
@@ -69,10 +46,19 @@ git add . && git commit -m "cambios" && git push
 
 # Netlify (producción)
 netlify deploy --prod --dir .
-
-# Preview (link temporal)
-netlify deploy --dir .
 ```
+
+## Personalización
+
+1. Reemplazar la foto en `img/foto-pareja.jpg`
+2. Actualizar en `index.html`:
+   - Nombres de los novios
+   - Fecha de la boda
+   - Horarios de ceremonia y recepción
+   - Números de WhatsApp (reemplazar `591XXXXXXXX`)
+   - Direcciones de los locales
+   - Datos bancarios para regalos
+3. La fecha del countdown se ajusta en `script.js` (si la fecha ya pasó, avanza al próximo año automáticamente para el demo)
 
 ## Comprimir imágenes
 

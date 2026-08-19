@@ -11,110 +11,60 @@ html {
 
 body {
   font-family: 'Cormorant Garamond', serif;
-  background: #e9e4da;
+  background: linear-gradient(180deg, #e9e4da 0%, #ded7c8 100%);
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* ==================== PROPOSAL TABS ==================== */
-.proposal-tabs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  background: #232f3e;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
-}
+img { max-width: 100%; display: block; }
 
-.tab-btn {
-  flex: 1;
-  padding: 13px 20px;
-  border: none;
-  background: transparent;
-  color: #8fa0b2;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.tab-btn.active {
-  color: #fff;
-  background: linear-gradient(135deg, #5d7a96 0%, #7d93b0 100%);
-}
-
-.tab-btn:hover:not(.active) {
-  color: #cfdbe6;
-  background: rgba(255,255,255,0.08);
-}
-
-/* ==================== DESIGN CONTAINER ==================== */
-.design {
-  display: none;
-  padding-top: 46px;
-}
-
-.design.active {
-  display: block;
-}
-
-/* Shared textures */
+/* Textura de papel */
 .paper-texture {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-  opacity: 0.8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
-/* =================================================================
-   DESIGN 1 — AZUL ROMÁNTICO ARTESANAL (propuesta principal)
-   ================================================================= */
-
-.design1-cover {
+/* ==================== PORTADA ==================== */
+.cover {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px 46px;
+  padding: 60px 24px 40px;
   overflow: hidden;
   background:
     radial-gradient(ellipse at center, #fdfaf3 0%, #f3ecdd 70%, #eadfc9 100%);
 }
 
-/* DOBLE BORDE ORNAMENTAL PORTADA */
 .cover-border {
   position: absolute;
-  inset: 14px;
-  border: 1.5px solid rgba(201,162,39,0.55);
+  inset: 12px;
+  border: 1.5px solid rgba(201,162,39,0.5);
   pointer-events: none;
 }
 .cover-border-inner {
   position: absolute;
-  inset: 7px;
-  border: 1px solid rgba(201,162,39,0.32);
+  inset: 6px;
+  border: 1px solid rgba(201,162,39,0.28);
   pointer-events: none;
 }
 
-.design1-cover .corner-f {
+.corner-f {
   position: absolute;
-  width: 88px;
-  opacity: 0.95;
+  width: clamp(58px, 16vw, 88px);
+  opacity: 0.9;
   z-index: 4;
-  filter: drop-shadow(0 2px 4px rgba(120,140,160,0.12));
 }
-.corner-tl { top: 22px; left: 14px; }
-.corner-tr { top: 22px; right: 14px; transform: scaleX(-1); }
-.corner-bl { bottom: 22px; left: 14px; transform: scaleY(-1); }
-.corner-br { bottom: 22px; right: 14px; transform: scale(-1,-1); }
+.corner-tl { top: 22px; left: 12px; }
+.corner-tr { top: 22px; right: 12px; transform: scaleX(-1); }
+.corner-bl { bottom: 22px; left: 12px; transform: scaleY(-1); }
+.corner-br { bottom: 22px; right: 12px; transform: scale(-1,-1); }
 
 .cover-content {
   position: relative;
@@ -126,48 +76,36 @@ body {
 
 .cover-kicker {
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: clamp(10px, 3vw, 12px);
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #8a97a8;
   margin-bottom: 14px;
 }
 
-.cover-guirnalda {
-  width: 220px;
-  margin-bottom: 10px;
-  opacity: 0.9;
-}
-
-.cover-subtitle {
-  font-family: 'Parisienne', cursive;
-  font-size: 22px;
-  color: #6d7c8f;
-  margin-bottom: 14px;
-}
+.cover-guirnalda { width: clamp(180px, 50vw, 230px); margin-bottom: 10px; }
 
 .cover-names {
   font-family: 'Pinyon Script', cursive;
-  font-size: 54px;
+  font-size: clamp(42px, 13vw, 60px);
   font-weight: 400;
   color: #2c3d52;
   line-height: 1.15;
 }
 
-.design1-cover .ampersand {
+.ampersand {
   font-family: 'Great Vibes', cursive;
-  font-size: 44px;
+  font-size: 0.85em;
   color: #c9a227;
-  display: inline;
-  padding: 0 10px;
+  padding: 0 8px;
   vertical-align: middle;
 }
 
-.cover-divisor { width: 200px; margin: 18px 0 14px; }
+.cover-divisor { width: clamp(170px, 45vw, 210px); margin: 16px auto 14px; }
 
 .cover-date {
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: clamp(12px, 3.5vw, 14px);
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #3d4d60;
@@ -177,27 +115,20 @@ body {
 .cover-city {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 16px;
+  font-size: clamp(15px, 4vw, 17px);
   color: #7a8798;
 }
 
-/* SOBRE · ENVELOPE */
-.envelope-container {
-  margin-top: 42px;
-  text-align: center;
-  position: relative;
-  z-index: 5;
-}
+.envelope-container { margin-top: 36px; text-align: center; z-index: 5; }
 
 .envelope {
-  width: 190px;
-  height: 132px;
+  width: clamp(160px, 44vw, 190px);
+  height: clamp(112px, 30vw, 132px);
   margin: 0 auto;
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
 .envelope:hover { transform: scale(1.04) rotate(-1deg); }
 
 .envelope-body {
@@ -208,14 +139,6 @@ body {
   box-shadow: 0 10px 24px rgba(60,80,105,0.28);
   position: relative;
   overflow: hidden;
-}
-
-.envelope-body::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    conic-gradient(from 180deg at 50% 100%, transparent 0 24deg, rgba(255,255,255,0.55) 24deg 40deg, transparent 40deg 68deg, rgba(255,255,255,0.4) 68deg 84deg, transparent 84deg) 0 0 / 100% 100% no-repeat;
 }
 
 .envelope-flap {
@@ -234,15 +157,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 62px;
-  height: 62px;
+  width: clamp(52px, 15vw, 62px);
+  height: clamp(52px, 15vw, 62px);
   border-radius: 50%;
   background: radial-gradient(circle at 32% 28%, #d9b566, #b8893a 60%, #9c7428);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
+  font-size: clamp(16px, 4.5vw, 20px);
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
@@ -252,104 +175,71 @@ body {
 
 .envelope-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: clamp(10px, 3vw, 12px);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #8793a2;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 
-/* ==================== PAGE / HOJA DE LA INVITACIÓN ==================== */
-.design1-page {
+/* ==================== INVITACIÓN / TARJETAS ==================== */
+.invitation {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 18px 0 30px;
+}
+
+.card {
   position: relative;
-  margin: 22px 16px;
+  margin: 14px 16px;
   background: linear-gradient(180deg, #fdfaf3 0%, #f8f2e6 100%);
-  box-shadow: 0 8px 22px rgba(90,105,122,0.18);
+  box-shadow: 0 8px 22px rgba(90,105,122,0.16);
+  border-radius: 2px;
   overflow: hidden;
 }
 
-.design1-page .page-border {
+.page-border {
   position: absolute;
-  inset: 9px;
-  border: 1.4px solid rgba(201,162,39,0.5);
+  inset: 8px;
+  border: 1.4px solid rgba(201,162,39,0.45);
   pointer-events: none;
 }
-.design1-page .page-border-inner {
+.page-border-inner {
   position: absolute;
-  inset: 5px;
-  border: 1px solid rgba(201,162,39,0.26);
+  inset: 4px;
+  border: 1px solid rgba(201,162,39,0.24);
   pointer-events: none;
 }
 
-.page-inner {
+.card-inner {
   position: relative;
   z-index: 2;
-  padding: 58px 30px;
+  padding: clamp(40px, 10vw, 56px) clamp(22px, 6vw, 34px);
   text-align: center;
 }
 
-/* sprigs / ramitas decorativas */
-.page-sprig { width: 130px; opacity: 0.9; display: block; margin: 0 auto; }
-.sprig-top { margin-bottom: 8px; }
-.sprig-bottom { margin-top: 26px; transform: scaleY(-1); }
+.sprig { width: clamp(100px, 28vw, 130px); opacity: 0.9; margin: 0 auto; }
+.sprig-top { margin-bottom: 10px; }
+.sprig-bottom { margin-top: 22px; transform: scaleY(-1); }
 
-.page-divisor { width: 180px; margin: 24px auto; display: block; }
-.mini-divisor { width: 130px; margin: 16px auto; display: block; }
+.page-divisor { width: clamp(150px, 42vw, 180px); margin: 20px auto; }
+.mini-divisor { width: 130px; margin: 16px auto; }
 
-/* ==================== RESERVATION ==================== */
-.reservation .reservation-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #7c8898;
-}
-
-.reservation-box {
-  width: 118px;
-  height: 118px;
-  margin: 22px auto;
-  border: 2px solid #c9a227;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(201,162,39,0.05);
-  box-shadow: inset 0 0 0 4px rgba(201,162,39,0.08);
-}
-
-.reservation-number {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 72px;
-  color: #c9a227;
-  line-height: 1;
-}
-
-.reservation-names {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 34px;
-  color: #2c3d52;
-  margin-top: 6px;
-}
-
-/* ==================== VERSE ==================== */
-.verse .page-inner { padding: 60px 34px; }
-
+/* ==================== VERSO ==================== */
 .quote-mark {
   font-family: 'Great Vibes', cursive;
   color: #d8c078;
-  font-size: 72px;
+  font-size: 64px;
   line-height: 0.6;
   display: block;
-  opacity: 0.9;
 }
-.quote-open { text-align: left; margin-bottom: 6px; }
-.quote-close { text-align: right; margin-top: 6px; transform: scaleY(-1); display: block; }
+.quote-open { text-align: left; margin-bottom: 4px; }
+.quote-close { text-align: right; margin-top: 4px; transform: scaleY(-1); }
 
 .verse-text {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 21px;
+  font-size: clamp(18px, 5vw, 21px);
   line-height: 1.7;
   color: #3d4d60;
   max-width: 300px;
@@ -358,224 +248,58 @@ body {
 
 .verse-reference {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: clamp(10px, 3vw, 12px);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #a08a45;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 .monogram {
   font-family: 'Pinyon Script', cursive;
-  font-size: 56px;
+  font-size: clamp(48px, 14vw, 60px);
   color: #7d93b0;
-  margin-top: 8px;
 }
-.mono-sep { color: #c9a227; font-family: 'Great Vibes', cursive; font-size: 40px; }
+.mono-sep { color: #c9a227; font-family: 'Great Vibes', cursive; }
 
 .nos-casamos {
   font-family: 'Parisienne', cursive;
-  font-size: 30px;
+  font-size: clamp(26px, 8vw, 32px);
   color: #c9a227;
-  margin-top: 4px;
 }
 
-/* ==================== HERO PHOTO (arco) ==================== */
-.hero-photo-inner { padding: 62px 26px 66px; }
-.hero-photo {
-  display: block;
-  width: 82%;
-  max-width: 280px;
+/* ==================== FOTO ==================== */
+.photo-inner { padding-bottom: clamp(40px, 10vw, 56px); }
+.arch-frame {
+  position: absolute;
+  top: clamp(40px, 10vw, 56px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 88%;
+  max-width: 300px;
+  pointer-events: none;
+  z-index: 3;
+}
+.couple-photo {
+  width: 80%;
+  max-width: 260px;
   margin: 0 auto;
   aspect-ratio: 4/5;
   object-fit: cover;
   border-radius: 130px 130px 16px 16px;
   box-shadow: 0 10px 26px rgba(70,90,115,0.3);
 }
-.arch-frame {
-  position: absolute;
-  top: 62px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 91%;
-  max-width: 318px;
-  pointer-events: none;
-  z-index: 3;
-}
-
 .hero-caption {
   font-family: 'Pinyon Script', cursive;
-  font-size: 40px;
+  font-size: clamp(32px, 9vw, 40px);
   color: #2c3d52;
   margin-top: 2px;
 }
-.hero-caption-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 16px;
-  color: #8a97a8;
-  margin-top: 2px;
-}
 
-/* ==================== PARENTS ==================== */
-.parents .page-inner { padding: 54px 30px; }
-
-.parents-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #48586b;
-}
-
-.parents-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #a08a45;
-  margin: 14px 0 4px;
-}
-
-.parents-names {
-  font-family: 'Parisienne', cursive;
-  font-size: 30px;
-  color: #2c3d52;
-  line-height: 1.2;
-}
-
-/* ==================== INVITATION ==================== */
-.invitation-inner { padding: 60px 34px; }
-
-.invitation-kicker {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #93a1b0;
-  margin-bottom: 10px;
-}
-
-.invitation-title {
-  font-family: 'Parisienne', cursive;
-  font-size: 32px;
-  font-weight: 500;
-  color: #c9a227;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.invitation-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  line-height: 1.75;
-  color: #48586b;
-}
-
-.inline-icon {
-  display: block;
-  font-size: 20px;
-  color: #c9a227;
-  margin: 16px 0;
-}
-
-/* ==================== MUSIC ==================== */
-.music-inner { padding: 54px 30px 46px; }
-
-.music-label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #7c8898;
-  margin-bottom: 22px;
-}
-
-.vinyl {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 50%, #3a3a3a 0 30%, #1f1f1f 32% 100%);
-  box-shadow: 0 8px 18px rgba(30,30,40,0.35), inset 0 0 0 6px rgba(255,255,255,0.04);
-  position: relative;
-  animation: vinylSpin 8s linear infinite paused;
-}
-.vinyl-disc { width: 100%; height: 100%; border-radius: 50%; }
-.vinyl-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #d9b566, #b8893a);
-  color: #fff;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
-@keyframes vinylSpin { to { transform: rotate(360deg); } }
-.music-inner.playing .vinyl { animation-play-state: running; }
-
-.player-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-  margin-bottom: 16px;
-}
-
-.player-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1.5px solid #c3ced9;
-  background: rgba(255,255,255,0.6);
-  color: #6d7c8f;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.play-btn { width: 58px; height: 58px; font-size: 18px; border-color: #c9a227; color: #c9a227; }
-.play-btn:hover { background: #c9a227; color: #fff; }
-
-.progress-bar {
-  width: 100%;
-  max-width: 240px;
-  height: 5px;
-  background: rgba(160,150,120,0.22);
-  border-radius: 3px;
-  margin: 0 auto 12px;
-  overflow: hidden;
-}
-.progress { width: 0%; height: 100%; background: #c9a227; transition: width 0.3s ease; }
-
-.song-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 15px;
-  color: #8a97a8;
-}
-
-/* ==================== DATE ==================== */
-.date-inner { padding: 54px 30px; }
-
-.date-kicker {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #93a1b0;
-  margin-bottom: 18px;
-}
-
+/* ==================== FECHA Y COUNTDOWN ==================== */
 .date-month {
   font-family: 'Parisienne', cursive;
-  font-size: 42px;
+  font-size: clamp(36px, 11vw, 44px);
   color: #c9a227;
   margin-bottom: 8px;
 }
@@ -584,12 +308,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .date-day-name, .date-year {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: clamp(11px, 3.2vw, 13px);
   letter-spacing: 2px;
   color: #7c8898;
   text-transform: uppercase;
@@ -597,46 +321,40 @@ body {
 
 .date-day {
   font-family: 'Pinyon Script', cursive;
-  font-size: 96px;
+  font-size: clamp(76px, 24vw, 96px);
   line-height: 1;
   color: #2c3d52;
 }
 
-.date-ceremony, .date-reception {
+.date-events {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 17px;
   font-style: italic;
+  font-size: clamp(15px, 4.5vw, 17px);
   color: #48586b;
-  margin-top: 4px;
+  margin-top: 6px;
 }
-
-/* ==================== COUNTDOWN ==================== */
-.countdown-inner { padding: 50px 24px 56px; }
 
 .countdown-label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: clamp(11px, 3vw, 12px);
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #7c8898;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .countdown-timer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 2px;
 }
 
-.time-block {
-  text-align: center;
-  padding: 0 6px;
-}
+.time-block { text-align: center; padding: 0 4px; }
 
 .time-number {
   font-family: 'Pinyon Script', cursive;
-  font-size: 56px;
+  font-size: clamp(42px, 13vw, 56px);
   color: #5d7a96;
   display: block;
   line-height: 1.1;
@@ -652,13 +370,13 @@ body {
 
 .time-separator {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 40px;
+  font-size: clamp(32px, 9vw, 40px);
   color: #c9a227;
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 }
 
-/* ==================== EVENTS ==================== */
-.event-inner { padding: 54px 30px 50px; }
+/* ==================== EVENTOS (ceremonia/recepción) ==================== */
+.event-icon { font-size: 34px; color: #5d7a96; margin-bottom: 12px; }
 
 .event-kicker {
   font-family: 'Montserrat', sans-serif;
@@ -666,13 +384,7 @@ body {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #a08a45;
-  margin-bottom: 12px;
-}
-
-.event-icon {
-  font-size: 34px;
-  margin-bottom: 14px;
-  color: #5d7a96;
+  margin-bottom: 10px;
 }
 
 .event-time {
@@ -685,18 +397,18 @@ body {
 
 .event-place {
   font-family: 'Parisienne', cursive;
-  font-size: 34px;
+  font-size: clamp(30px, 9vw, 36px);
   color: #c9a227;
-  margin-bottom: 4px;
   line-height: 1.1;
+  margin-bottom: 4px;
 }
 
 .event-location {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 16px;
+  font-size: clamp(15px, 4.5vw, 17px);
   color: #7a8798;
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .map-btn {
@@ -707,102 +419,89 @@ body {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
-  text-decoration: none;
   cursor: pointer;
   border: 1.5px solid #c9a227;
   color: #a08a45;
   background: transparent;
   transition: all 0.3s ease;
 }
-
 .map-btn:hover { background: #c9a227; color: #fff; transform: translateY(-2px); }
 
-/* ==================== TIMELINE ==================== */
-.timeline-inner { padding: 54px 30px; }
-
-.timeline-title {
-  font-family: 'Parisienne', cursive;
-  font-size: 32px;
-  font-weight: 500;
-  color: #2c3d52;
-  margin-bottom: 20px;
-}
-
-.timeline-items { max-width: 280px; margin: 0 auto; }
+/* ==================== ITINERARIO ==================== */
+.timeline-items { max-width: 300px; margin: 0 auto; }
 
 .timeline-item {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   background: rgba(201,162,39,0.05);
   border: 1px solid rgba(201,162,39,0.25);
   border-radius: 12px;
   padding: 13px 18px;
 }
 
-.timeline-icon {
-  font-size: 26px;
-  color: #5d7a96;
-  flex-shrink: 0;
-}
-
-.timeline-info { flex: 1; text-align: left; }
+.timeline-icon { font-size: 26px; color: #5d7a96; flex-shrink: 0; }
 
 .timeline-event {
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   letter-spacing: 2px;
   color: #3d4d60;
+  flex: 1;
+  text-align: left;
 }
 
 .timeline-time {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: #a08a45;
 }
 
 .timeline-line {
   width: 2px;
   height: 22px;
-  margin-left: 21px;
+  margin-left: 20px;
   background: linear-gradient(180deg, rgba(201,162,39,0.6), rgba(201,162,39,0.15));
 }
 
-/* ==================== DRESS CODE ==================== */
-.dresscode-inner { padding: 54px 30px; }
-
+/* ==================== ETIQUETA ==================== */
 .section-kicker {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: #93a1b0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.section-title {
-  font-family: 'Parisienne', cursive;
-  font-size: 34px;
-  font-weight: 500;
-  color: #2c3d52;
-  margin-bottom: 18px;
+.section-icon { font-size: 32px; color: #c9a227; margin-bottom: 10px; }
+
+.section-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 4.8vw, 19px);
+  font-style: italic;
+  line-height: 1.7;
+  color: #48586b;
+  max-width: 300px;
+  margin: 0 auto 20px;
 }
+.section-text strong { color: #c9a227; font-weight: 600; }
 
 .dresscode-icons {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  margin-bottom: 22px;
+  gap: 46px;
+  margin-bottom: 20px;
 }
 
 .dresscode-icon {
-  font-size: 34px;
-  padding: 12px;
+  font-size: 30px;
+  padding: 10px;
   border: 1.5px solid #c3ced9;
   border-radius: 50%;
-  width: 62px;
-  height: 62px;
+  width: 58px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -810,7 +509,7 @@ body {
 
 .dresscode-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
+  font-size: clamp(17px, 4.8vw, 19px);
   color: #48586b;
   line-height: 1.6;
 }
@@ -820,16 +519,11 @@ body {
   font-style: italic;
   font-size: 16px;
   color: #7a8798;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 .dresscode-note span { color: #5d7a96; }
 
-.palette {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 18px;
-}
+.palette { display: flex; justify-content: center; gap: 14px; margin-top: 16px; }
 
 .swatch {
   width: 26px;
@@ -842,22 +536,9 @@ body {
 .sw-silver { background: #b9c4cf; }
 .sw-cream { background: #f3ecd9; }
 
-/* ==================== GIFTS ==================== */
-.gifts-inner { padding: 54px 30px; }
-
-.gift-icon { font-size: 34px; color: #c9a227; margin-bottom: 12px; }
-
-.gifts-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-style: italic;
-  line-height: 1.7;
-  color: #48586b;
-  margin-bottom: 24px;
-}
-
+/* ==================== REGALOS ==================== */
 .gift-option {
-  margin: 0 auto 14px;
+  margin: 0 auto 12px;
   padding: 16px 20px;
   border: 1px solid rgba(201,162,39,0.3);
   border-radius: 12px;
@@ -880,23 +561,9 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px;
   color: #7a8798;
-  line-height: 1.5;
 }
 
 /* ==================== RSVP ==================== */
-.rsvp-inner { padding: 54px 30px; }
-
-.rsvp-icon { font-size: 34px; color: #5d7a96; margin-bottom: 12px; }
-
-.rsvp-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #48586b;
-  margin-bottom: 26px;
-}
-.rsvp-text strong { color: #c9a227; font-weight: 600; }
-
 .rsvp-buttons {
   display: flex;
   flex-direction: column;
@@ -923,211 +590,43 @@ body {
   color: #fff;
   box-shadow: 0 6px 14px rgba(37,211,102,0.35);
 }
-
 .whatsapp-btn:hover { background: #1da851; transform: translateY(-2px); }
-
 .wa-ico { font-size: 16px; }
 
-/* ==================== NO KIDS ==================== */
-.no-kids-inner { padding: 54px 30px; }
-
-.no-kids-icon { font-size: 30px; color: #c9a227; margin-bottom: 12px; }
-
-.no-kids-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-style: italic;
-  line-height: 1.8;
-  color: #48586b;
-}
-
-/* ==================== FOOTER ==================== */
-.footer-design1 { margin-bottom: 30px; }
-
-.footer-inner { padding: 60px 30px 56px; }
-
-.footer-text {
+/* ==================== CIERRE ==================== */
+.closing-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: clamp(11px, 3vw, 12px);
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #7c8898;
   margin-bottom: 14px;
 }
 
-.footer-thanks {
+.closing-thanks {
   font-family: 'Great Vibes', cursive;
-  font-size: 46px;
+  font-size: clamp(40px, 12vw, 50px);
   color: #c9a227;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-.footer-monogram {
+.closing-monogram {
   font-family: 'Pinyon Script', cursive;
-  font-size: 40px;
+  font-size: clamp(36px, 11vw, 44px);
   color: #2c3d52;
-  margin: 16px 0 4px;
+  margin: 14px 0 4px;
 }
 
-.footer-hashtag {
+.closing-hashtag {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-size: clamp(11px, 3vw, 12px);
   letter-spacing: 2px;
   color: #93a1b0;
-  margin-bottom: 18px;
 }
-
-.footer-link {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #a08a45;
-  border-bottom: 1px solid #d8c078;
-  padding-bottom: 3px;
-}
-
-/* =================================================================
-   DESIGN 2 — DORADO ELEGANTE (se mantiene)
-   ================================================================= */
-.design2-cover {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 20px 40px;
-  overflow: hidden;
-  background: linear-gradient(180deg, #171a20 0%, #232833 60%, #2d3340 100%);
-}
-
-.design2-subtitle { color: #c9a227; }
-.design2-names { color: #fff; }
-.design2-amp { color: #c9a227; }
-.design2-date { color: #c9a227; }
-
-.design2-ornament {
-  position: absolute;
-  font-size: 24px;
-  color: #c9a227;
-  z-index: 3;
-}
-.design2-ornament.top-left { top: 60px; left: 20px; }
-.design2-ornament.top-right { top: 60px; right: 20px; }
-
-.design2-envelope-body { background: linear-gradient(135deg, #c9a227 0%, #a67c00 100%); }
-.design2-seal {
-  background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
-  color: #1a1a1a;
-}
-.design2-envelope-text { color: #c9a227; }
-
-.design2 .reservation { background: #171a20; color: #fff; }
-.design2-text { color: #c9a227; }
-.design2-number { color: #c9a227; border-color: #c9a227; }
-
-.design2 .verse { background: #232833; color: #fff; }
-.design2-verse { color: #fff; }
-.design2-reference { color: #c9a227; }
-.design2-mono { color: #c9a227; }
-.design2-casamos { color: #fff; }
-
-.design2 .parents { background: #171a20; color: #fff; }
-.design2-parents-text { color: #fff; }
-.design2-parents-label { color: #c9a227; }
-.design2-parents-names { color: #fff; }
-
-.design2 .invitation-text { background: #232833; }
-.design2-invitation { color: #fff; }
-
-.design2 .music-player { background: #171a20; }
-.design2-music-label { color: #c9a227; }
-.design2-btn { color: #c9a227; border: 2px solid #c9a227; }
-.design2-play { background: #c9a227; color: #1a1a1a; }
-.design2-progress { background: #3d3d3d; }
-.design2-bar { background: #c9a227; }
-
-.design2 .date-display { background: #232833; }
-.design2-month { color: #c9a227; }
-.design2-day-name, .design2-year { color: #c9a227; }
-.design2-day { color: #fff; }
-
-.design2 .countdown { background: #171a20; }
-.design2-countdown-label { color: #c9a227; }
-.design2-time { color: #fff; }
-.design2-label { color: #c9a227; }
-.design2-sep { color: #c9a227; }
-
-.design2 .event-section { background: #232833; }
-.design2-icon { color: #c9a227; }
-.design2-event-time { color: #c9a227; }
-.design2-event-title { color: #fff; }
-.design2-event-place { color: #fff; }
-.design2-event-location { color: #c9a227; }
-.design2-map-btn { color: #c9a227; border: 2px solid #c9a227; background: transparent; }
-.design2-map-btn:hover { background: #c9a227; color: #1a1a1a; }
-
-.design2 .timeline { background: #171a20; }
-.design2-timeline-title { color: #c9a227; }
-.design2-tl-icon { color: #c9a227; }
-.design2-tl-event { color: #fff; }
-.design2-tl-time { color: #c9a227; }
-.design2-line { background: #3d3d3d; }
-
-.design2 .dresscode { background: #232833; }
-.design2-section-title { color: #c9a227; }
-.design2-dress-text { color: #fff; }
-
-.design2 .gifts { background: #171a20; }
-.design2-gift-icon { color: #c9a227; }
-.design2-gifts-text { color: #fff; }
-.design2-gifts-option { color: #c9a227; }
-.design2-bank { color: #fff; }
-
-.design2 .rsvp { background: #232833; }
-.design2-rsvp-icon { color: #c9a227; }
-.design2-rsvp-text { color: #fff; }
-.design2-whatsapp { background: #25D366; color: #fff; border: none; }
-
-.design2 .no-kids { background: #171a20; }
-.design2-no-kids { color: #fff; }
-
-.design2 .footer-section { background: linear-gradient(180deg, #232833 0%, #171a20 100%); }
-.design2-footer-text { color: #c9a227; }
-.design2-thanks { color: #fff; }
-.design2-corner-ornament {
-  position: absolute;
-  font-size: 20px;
-  color: #c9a227;
-}
-.design2-corner-ornament.bottom-left { bottom: 100px; left: 20px; }
-.design2-corner-ornament.bottom-right { bottom: 100px; right: 20px; }
-
-/* Design 2 shared content styles */
-.design2 section {
-  text-align: center;
-  padding: 50px 26px;
-}
-
-.design2 .cover { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
 
 /* ==================== RESPONSIVE ==================== */
-@media (min-width: 768px) {
-  .cover-names { font-size: 64px; }
-  .design1-cover .ampersand { font-size: 50px; }
-  .envelope { width: 210px; height: 146px; }
-}
-
-@media (min-width: 900px) {
-  .design1-page {
-    max-width: 480px;
-    margin: 26px auto;
-    border-radius: 2px;
-  }
-  .design1-cover { max-width: 480px; margin: 0 auto; }
-  body { background: #d9d3c6; }
+@media (min-width: 600px) {
+  .invitation { padding: 24px 0 40px; }
+  .card { margin: 16px auto; max-width: 480px; }
+  .card-inner { padding: 58px 34px; }
 }
