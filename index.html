@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda - Mariana & Daniel</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Tabs de Propuestas -->
+  <div class="proposal-tabs">
+    <button class="tab-btn active" data-tab="design1">Propuesta 1</button>
+    <button class="tab-btn" data-tab="design2">Propuesta 2</button>
+  </div>
+
+  <!-- ==================== PROPUESTA 1: AZUL ROMANTICO ==================== -->
+  <div id="design1" class="design active">
+    
+    <!-- Cover / Portada -->
+    <section class="cover design1-cover">
+      <div class="floral-top">
+        <img src="img/flores-top.svg" alt="Decoración floral" class="floral-img">
+      </div>
+      <div class="cover-content">
+        <p class="cover-subtitle">NUESTRA BODA</p>
+        <h1 class="cover-names">Mariana <span class="ampersand">&</span> Daniel</h1>
+        <p class="cover-date">29 - AGOSTO - 2025</p>
+      </div>
+      <div class="envelope-container">
+        <div class="envelope">
+          <div class="envelope-body"></div>
+          <div class="wax-seal">
+            <span>MD</span>
+          </div>
+        </div>
+        <p class="envelope-text">CLICK PARA ABRIR LA INVITACIÓN</p>
+      </div>
+      <div class="floral-bottom">
+        <img src="img/flores-bottom.svg" alt="Decoración floral" class="floral-img">
+      </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="reservation">
+      <p class="reservation-text">HEMOS RESERVADO</p>
+      <div class="reservation-number">2</div>
+      <p class="reservation-text">LUGARES EN SU HONOR</p>
+    </section>
+
+    <!-- Verse -->
+    <section class="verse">
+      <p class="verse-text">"El que encontró una esposa<br>encontró la felicidad;<br>Yavé es quien le otorgó ese favor."</p>
+      <p class="verse-reference">Proverbios 18:22</p>
+      <div class="monogram">M<span>|</span>D</div>
+      <p class="nos-casamos">¡NOS CASAMOS!</p>
+    </section>
+
+    <!-- Parents -->
+    <section class="parents">
+      <p class="parents-text">Con la bendición de Dios<br>y la de nuestros padres:</p>
+      <p class="parents-label">Nosotros</p>
+      <h2 class="parents-names">Mariana <span class="ampersand">&</span> Daniel</h2>
+    </section>
+
+    <!-- Invitation Text -->
+    <section class="invitation-text">
+      <p>Tenemos el honor de invitarte a<br>celebrar nuestra unión en matrimonio</p>
+    </section>
+
+    <!-- Music Player (Demo) -->
+    <section class="music-player">
+      <p class="music-label">Dale play a nuestra canción</p>
+      <div class="player-controls">
+        <button class="player-btn">⏮</button>
+        <button class="player-btn play-btn">▶</button>
+        <button class="player-btn">⏭</button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </section>
+
+    <!-- Date Display -->
+    <section class="date-display">
+      <p class="date-month">AGOSTO</p>
+      <div class="date-row">
+        <span class="date-day-name">VIERNES</span>
+        <span class="date-day">29</span>
+        <span class="date-year">2025</span>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown">
+      <p class="countdown-label">FALTAN</p>
+      <div class="countdown-timer">
+        <div class="time-block">
+          <span class="time-number" id="d1-days">00</span>
+          <span class="time-label">Dias</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-block">
+          <span class="time-number" id="d1-hours">00</span>
+          <span class="time-label">Horas</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-block">
+          <span class="time-number" id="d1-minutes">00</span>
+          <span class="time-label">Min</span>
+        </div>
+        <span class="time-separator">:</span>
+        <div class="time-block">
+          <span class="time-number" id="d1-seconds">00</span>
+          <span class="time-label">Seg</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Section -->
+    <section class="photo-section">
+      <img src="img/foto-pareja.jpg" alt="Foto de la pareja" class="couple-photo">
+    </section>
+
+    <!-- Ceremony -->
+    <section class="event-section">
+      <div class="event-icon">⛪</div>
+      <p class="event-time">18:30 HRS.</p>
+      <h3 class="event-title">CEREMONIA</h3>
+      <p class="event-place">IGLESIA SAN JUAN BAUTISTA</p>
+      <p class="event-location">Montero, Santa Cruz</p>
+      <button class="map-btn" onclick="openMap('Iglesia San Juan Bautista', 'Montero, Santa Cruz')">
+        Ver ubicación
+      </button>
+    </section>
+
+    <!-- Reception -->
+    <section class="event-section">
+      <div class="event-icon">🥂</div>
+      <p class="event-time">20:00 HRS.</p>
+      <h3 class="event-title">RECEPCIÓN</h3>
+      <p class="event-place">SALÓN ZAFIRO</p>
+      <p class="event-location">Montero, Santa Cruz</p>
+      <button class="map-btn" onclick="openMap('Salón Zafiro', 'Montero, Santa Cruz')">
+        Ver ubicación
+      </button>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline">
+      <h3 class="timeline-title">ITINERARIO DE ACTIVIDADES</h3>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-icon">💍</div>
+          <div class="timeline-info">
+            <p class="timeline-event">CEREMONIA</p>
+            <p class="timeline-time">18:30</p>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-icon">🍸</div>
+          <div class="timeline-info">
+            <p class="timeline-event">RECEPCIÓN</p>
+            <p class="timeline-time">20:00</p>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-icon">🍽️</div>
+          <div class="timeline-info">
+            <p class="timeline-event">CENA</p>
+            <p class="timeline-time">21:00</p>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-icon">🎆</div>
+          <div class="timeline-info">
+            <p class="timeline-event">FIESTA</p>
+            <p class="timeline-time">23:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section class="dresscode">
+      <h3 class="section-title">Etiqueta</h3>
+      <div class="dresscode-icons">
+        <span class="dresscode-icon">👔</span>
+        <span class="dresscode-icon">👗</span>
+      </div>
+      <p class="dresscode-text">Damas: Vestido largo (no blanco)</p>
+      <p class="dresscode-text">Caballeros: Traje formal</p>
+    </section>
+
+    <!-- Gift Suggestions -->
+    <section class="gifts">
+      <div class="gift-icon">🎁</div>
+      <h3 class="section-title">SUGERENCIA DE REGALOS</h3>
+      <p class="gifts-text">El mejor regalo es tu presencia, pero si deseas tener un detalle con nosotros, les dejamos estas opciones:</p>
+      <p class="gifts-option">LLUVIA DE SOBRES</p>
+      <div class="gifts-icon">✉️</div>
+      <p class="gifts-option">TRANSFERENCIA</p>
+      <p class="gifts-bank">Cuenta: AAABBBCCCC</p>
+      <p class="gifts-bank">Routing: XXXYYYZZZ</p>
+      <p class="gifts-bank">HHHHHH GGGGGG</p>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp">
+      <div class="rsvp-icon">📞</div>
+      <h3 class="section-title">CONFIRMAR ASISTENCIA</h3>
+      <p class="rsvp-text">Agradecemos que confirmes tu asistencia antes del 20 de Agosto</p>
+      <div class="rsvp-buttons">
+        <a href="https://wa.me/591XXXXXXXX?text=Hola! Confirmo mi asistencia a la boda de Mariana y Daniel" class="whatsapp-btn" target="_blank">
+          Contacto novia
+        </a>
+        <a href="https://wa.me/591XXXXXXXX?text=Hola! Confirmo mi asistencia a la boda de Mariana y Daniel" class="whatsapp-btn" target="_blank">
+          Contacto novio
+        </a>
+      </div>
+    </section>
+
+    <!-- No Kids -->
+    <section class="no-kids">
+      <h3 class="section-title">SIN NIÑOS</h3>
+      <p class="no-kids-text">Un evento para adultos está en camino. ¡Así que prepárense para una noche llena de diversión!<br>Dejemos a los niños en casa esta vez.</p>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-section">
+      <p class="footer-text">ESPERAMOS CONTAR CON SU PRESENCIA</p>
+      <h2 class="footer-thanks">Muchas Gracias!</h2>
+      <img src="img/foto-pareja-footer.jpg" alt="Foto de la pareja" class="footer-photo">
+      <div class="floral-footer">
+        <img src="img/flores-footer.svg" alt="Decoración floral" class="floral-img">
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== PROPUESTA 2: DORADO ELEGANTE ==================== -->
+  <div id="design2" class="design">
+    
+    <!-- Cover / Portada -->
+    <section class="cover design2-cover">
+      <div class="design2-ornament top-left">✦</div>
+      <div class="design2-ornament top-right">✦</div>
+      <div class="cover-content">
+        <p class="cover-subtitle design2-subtitle">THE WEDDING OF</p>
+        <h1 class="cover-names design2-names">Mariana <span class="ampersand design2-amp">&</span> Daniel</h1>
+        <div class="design2-divider"></div>
+        <p class="cover-date design2-date">29 / 08 / 2025</p>
+      </div>
+      <div class="envelope-container design2-envelope">
+        <div class="envelope design2-envelope-body">
+          <div class="wax-seal design2-seal">
+            <span>M&D</span>
+          </div>
+        </div>
+        <p class="envelope-text design2-envelope-text">ABRIR INVITACIÓN</p>
+      </div>
+    </section>
+
+    <!-- Reservation -->
+    <section class="reservation design2-section">
+      <p class="reservation-text design2-text">HEMOS RESERVADO</p>
+      <div class="reservation-number design2-number">2</div>
+      <p class="reservation-text design2-text">LUGARES EN SU HONOR</p>
+    </section>
+
+    <!-- Verse -->
+    <section class="verse design2-section">
+      <p class="verse-text design2-verse">"El que encontró una esposa<br>encontró la felicidad;<br>Yavé es quien le otorgó ese favor."</p>
+      <p class="verse-reference design2-reference">Proverbios 18:22</p>
+      <div class="monogram design2-mono">M<span>|</span>D</div>
+      <p class="nos-casamos design2-casamos">¡NOS CASAMOS!</p>
+    </section>
+
+    <!-- Parents -->
+    <section class="parents design2-section">
+      <p class="parents-text design2-parents-text">Con la bendición de Dios<br>y la de nuestros padres:</p>
+      <p class="parents-label design2-parents-label">Nosotros</p>
+      <h2 class="parents-names design2-parents-names">Mariana <span class="ampersand design2-amp">&</span> Daniel</h2>
+    </section>
+
+    <!-- Invitation Text -->
+    <section class="invitation-text design2-section">
+      <p class="design2-invitation">Tenemos el honor de invitarte a<br>celebrar nuestra unión en matrimonio</p>
+    </section>
+
+    <!-- Music Player (Demo) -->
+    <section class="music-player design2-section">
+      <p class="music-label design2-music-label">Dale play a nuestra canción</p>
+      <div class="player-controls design2-player">
+        <button class="player-btn design2-btn">⏮</button>
+        <button class="player-btn play-btn design2-play">▶</button>
+        <button class="player-btn design2-btn">⏭</button>
+      </div>
+      <div class="progress-bar design2-progress">
+        <div class="progress design2-bar"></div>
+      </div>
+    </section>
+
+    <!-- Date Display -->
+    <section class="date-display design2-section">
+      <p class="date-month design2-month">AGOSTO</p>
+      <div class="date-row design2-date-row">
+        <span class="date-day-name design2-day-name">VIERNES</span>
+        <span class="date-day design2-day">29</span>
+        <span class="date-year design2-year">2025</span>
+      </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown design2-section">
+      <p class="countdown-label design2-countdown-label">FALTAN</p>
+      <div class="countdown-timer design2-timer">
+        <div class="time-block design2-block">
+          <span class="time-number design2-time" id="d2-days">00</span>
+          <span class="time-label design2-label">Dias</span>
+        </div>
+        <span class="time-separator design2-sep">:</span>
+        <div class="time-block design2-block">
+          <span class="time-number design2-time" id="d2-hours">00</span>
+          <span class="time-label design2-label">Horas</span>
+        </div>
+        <span class="time-separator design2-sep">:</span>
+        <div class="time-block design2-block">
+          <span class="time-number design2-time" id="d2-minutes">00</span>
+          <span class="time-label design2-label">Min</span>
+        </div>
+        <span class="time-separator design2-sep">:</span>
+        <div class="time-block design2-block">
+          <span class="time-number design2-time" id="d2-seconds">00</span>
+          <span class="time-label design2-label">Seg</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Section -->
+    <section class="photo-section design2-section">
+      <img src="img/foto-pareja-3.jpg" alt="Foto de la pareja" class="couple-photo design2-photo">
+    </section>
+
+    <!-- Ceremony -->
+    <section class="event-section design2-section">
+      <div class="event-icon design2-icon">⛪</div>
+      <p class="event-time design2-event-time">18:30 HRS.</p>
+      <h3 class="event-title design2-event-title">CEREMONIA</h3>
+      <p class="event-place design2-event-place">IGLESIA SAN JUAN BAUTISTA</p>
+      <p class="event-location design2-event-location">Montero, Santa Cruz</p>
+      <button class="map-btn design2-map-btn" onclick="openMap('Iglesia San Juan Bautista', 'Montero, Santa Cruz')">
+        Ver ubicación
+      </button>
+    </section>
+
+    <!-- Reception -->
+    <section class="event-section design2-section">
+      <div class="event-icon design2-icon">🥂</div>
+      <p class="event-time design2-event-time">20:00 HRS.</p>
+      <h3 class="event-title design2-event-title">RECEPCIÓN</h3>
+      <p class="event-place design2-event-place">SALÓN ZAFIRO</p>
+      <p class="event-location design2-event-location">Montero, Santa Cruz</p>
+      <button class="map-btn design2-map-btn" onclick="openMap('Salón Zafiro', 'Montero, Santa Cruz')">
+        Ver ubicación
+      </button>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline design2-section">
+      <h3 class="timeline-title design2-timeline-title">ITINERARIO DE ACTIVIDADES</h3>
+      <div class="timeline-items design2-timeline">
+        <div class="timeline-item design2-item">
+          <div class="timeline-icon design2-tl-icon">💍</div>
+          <div class="timeline-info">
+            <p class="timeline-event design2-tl-event">CEREMONIA</p>
+            <p class="timeline-time design2-tl-time">18:30</p>
+          </div>
+        </div>
+        <div class="timeline-line design2-line"></div>
+        <div class="timeline-item design2-item">
+          <div class="timeline-icon design2-tl-icon">🍸</div>
+          <div class="timeline-info">
+            <p class="timeline-event design2-tl-event">RECEPCIÓN</p>
+            <p class="timeline-time design2-tl-time">20:00</p>
+          </div>
+        </div>
+        <div class="timeline-line design2-line"></div>
+        <div class="timeline-item design2-item">
+          <div class="timeline-icon design2-tl-icon">🍽️</div>
+          <div class="timeline-info">
+            <p class="timeline-event design2-tl-event">CENA</p>
+            <p class="timeline-time design2-tl-time">21:00</p>
+          </div>
+        </div>
+        <div class="timeline-line design2-line"></div>
+        <div class="timeline-item design2-item">
+          <div class="timeline-icon design2-tl-icon">🎆</div>
+          <div class="timeline-info">
+            <p class="timeline-event design2-tl-event">FIESTA</p>
+            <p class="timeline-time design2-tl-time">23:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dress Code -->
+    <section class="dresscode design2-section">
+      <h3 class="section-title design2-section-title">Etiqueta</h3>
+      <div class="dresscode-icons">
+        <span class="dresscode-icon design2-dress-icon">👔</span>
+        <span class="dresscode-icon design2-dress-icon">👗</span>
+      </div>
+      <p class="dresscode-text design2-dress-text">Damas: Vestido largo (no blanco)</p>
+      <p class="dresscode-text design2-dress-text">Caballeros: Traje formal</p>
+    </section>
+
+    <!-- Gift Suggestions -->
+    <section class="gifts design2-section">
+      <div class="gift-icon design2-gift-icon">🎁</div>
+      <h3 class="section-title design2-section-title">SUGERENCIA DE REGALOS</h3>
+      <p class="gifts-text design2-gifts-text">El mejor regalo es tu presencia, pero si deseas tener un detalle con nosotros, les dejamos estas opciones:</p>
+      <p class="gifts-option design2-gifts-option">LLUVIA DE SOBRES</p>
+      <div class="gifts-icon design2-gifts-icon">✉️</div>
+      <p class="gifts-option design2-gifts-option">TRANSFERENCIA</p>
+      <p class="gifts-bank design2-bank">Cuenta: AAABBBCCCC</p>
+      <p class="gifts-bank design2-bank">Routing: XXXYYYZZZ</p>
+      <p class="gifts-bank design2-bank">HHHHHH GGGGGG</p>
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp design2-section">
+      <div class="rsvp-icon design2-rsvp-icon">📞</div>
+      <h3 class="section-title design2-section-title">CONFIRMAR ASISTENCIA</h3>
+      <p class="rsvp-text design2-rsvp-text">Agradecemos que confirmes tu asistencia antes del 20 de Agosto</p>
+      <div class="rsvp-buttons">
+        <a href="https://wa.me/591XXXXXXXX?text=Hola! Confirmo mi asistencia a la boda de Mariana y Daniel" class="whatsapp-btn design2-whatsapp" target="_blank">
+          Contacto novia
+        </a>
+        <a href="https://wa.me/591XXXXXXXX?text=Hola! Confirmo mi asistencia a la boda de Mariana y Daniel" class="whatsapp-btn design2-whatsapp" target="_blank">
+          Contacto novio
+        </a>
+      </div>
+    </section>
+
+    <!-- No Kids -->
+    <section class="no-kids design2-section">
+      <h3 class="section-title design2-section-title">SIN NIÑOS</h3>
+      <p class="no-kids-text design2-no-kids">Un evento para adultos está en camino. ¡Así que prepárense para una noche llena de diversión!<br>Dejemos a los niños en casa esta vez.</p>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-section design2-section">
+      <p class="footer-text design2-footer-text">ESPERAMOS CONTAR CON SU PRESENCIA</p>
+      <h2 class="footer-thanks design2-thanks">Muchas Gracias!</h2>
+      <img src="img/foto-pareja-footer.jpg" alt="Foto de la pareja" class="footer-photo design2-footer-photo">
+      <div class="design2-corner-ornament bottom-left">✦</div>
+      <div class="design2-corner-ornament bottom-right">✦</div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
