@@ -1,6 +1,9 @@
 # Herramientas locales
 compress.ps1
 
+# Capturas de verificación del navegador
+.openchamber/
+
 # Carpeta del sistema
 Thumbs.db
 .DS_Store
