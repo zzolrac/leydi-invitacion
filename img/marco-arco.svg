@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" fill="none" role="img" aria-label="Marco en arco">
+  <defs>
+    <linearGradient id="archGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#e6cf8f"/>
+    </linearGradient>
+  </defs>
+  <!-- outer arch -->
+  <path d="M45 480 V210 A155 155 0 0 1 355 210 V480" stroke="#c9a227" stroke-width="2.5" stroke-opacity="0.9"/>
+  <!-- inner arch -->
+  <path d="M62 480 V212 A138 138 0 0 1 338 212 V480" stroke="#c9a227" stroke-width="1.2" stroke-opacity="0.55"/>
+  <!-- dashed detail -->
+  <path d="M55 470 V215 A145 145 0 0 1 345 215 V470" stroke="#c9a227" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="2 6" stroke-linecap="round"/>
+  <!-- corner leaves top -->
+  <path d="M62 150 q18 -20 40 -8 q-6 22 -28 18 z" fill="#8aa58a" opacity="0.75"/>
+  <path d="M338 150 q-18 -20 -40 -8 q6 22 28 18 z" fill="#8aa58a" opacity="0.75"/>
+  <!-- corner blooms top -->
+  <g transform="translate(62,140)">
+    <circle cx="0" cy="0" r="7" fill="#e6dbe2"/>
+    <g fill="#c9a227">
+      <ellipse cx="0" cy="-8" rx="3.6" ry="6"/>
+      <ellipse cx="7.6" cy="-2.6" rx="3.6" ry="6" transform="rotate(72)"/>
+      <ellipse cx="7.6" cy="2.6" rx="3.6" ry="6" transform="rotate(144)"/>
+      <ellipse cx="0" cy="8" rx="3.6" ry="6" transform="rotate(216)"/>
+      <ellipse cx="-7.6" cy="2.6" rx="3.6" ry="6" transform="rotate(288)"/>
+    </g>
+    <circle cx="0" cy="0" r="2.4" fill="#c9a227"/>
+  </g>
+  <g transform="translate(338,140)">
+    <circle cx="0" cy="0" r="7" fill="#e6dbe2"/>
+    <g fill="#c9a227">
+      <ellipse cx="0" cy="-8" rx="3.6" ry="6"/>
+      <ellipse cx="7.6" cy="-2.6" rx="3.6" ry="6" transform="rotate(72)"/>
+      <ellipse cx="7.6" cy="2.6" rx="3.6" ry="6" transform="rotate(144)"/>
+      <ellipse cx="0" cy="8" rx="3.6" ry="6" transform="rotate(216)"/>
+      <ellipse cx="-7.6" cy="2.6" rx="3.6" ry="6" transform="rotate(288)"/>
+    </g>
+    <circle cx="0" cy="0" r="2.4" fill="#c9a227"/>
+  </g>
+  <!-- base line detail -->
+  <path d="M120 480 q80 18 160 0" stroke="#c9a227" stroke-width="2" stroke-opacity="0.8"/>
+  <path d="M135 490 q65 14 130 0" stroke="#c9a227" stroke-width="1.2" stroke-opacity="0.5"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90" width="200" height="90" role="img" aria-label="Rama de arrayán">
+  <defs>
+    <radialGradient id="sprigSplash" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#cfe0c0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#cfe0c0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="55" cy="40" r="50" fill="url(#sprigSplash)"/>
+  <circle cx="145" cy="45" r="45" fill="url(#sprigSplash)"/>
+
+  <!-- stems -->
+  <path d="M15 70 C 60 55, 100 35, 185 20" fill="none" stroke="#7b9c7b" stroke-width="2.2" stroke-opacity="0.55" stroke-linecap="round"/>
+  <path d="M12 45 C 50 50, 90 40, 175 40" fill="none" stroke="#7b9c7b" stroke-width="1.8" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M30 12 C 75 20, 120 22, 185 55" fill="none" stroke="#7b9c7b" stroke-width="1.8" stroke-opacity="0.45" stroke-linecap="round"/>
+
+  <!-- small leaves -->
+  <g fill="#8aa58a">
+    <ellipse cx="40" cy="55" rx="8" ry="3.4" transform="rotate(-30 40 55)"/>
+    <ellipse cx="75" cy="48" rx="8" ry="3.4" transform="rotate(20 75 48)"/>
+    <ellipse cx="110" cy="38" rx="8" ry="3.4" transform="rotate(-24 110 38)"/>
+    <ellipse cx="145" cy="28" rx="8" ry="3.4" transform="rotate(16 145 28)"/>
+  </g>
+
+  <!-- baby's breath dots -->
+  <g fill="#eef3ea">
+    <circle cx="95" cy="30" r="3.2"/>
+    <circle cx="112" cy="42" r="2.8"/>
+    <circle cx="128" cy="24" r="3"/>
+    <circle cx="140" cy="45" r="2.6"/>
+    <circle cx="158" cy="30" r="3"/>
+    <circle cx="170" cy="42" r="2.6"/>
+    <circle cx="60" cy="42" r="2.8"/>
+    <circle cx="82" cy="52" r="2.6"/>
+  </g>
+  <g fill="#c9a227" opacity="0.9">
+    <circle cx="95" cy="30" r="1.1"/>
+    <circle cx="112" cy="42" r="1"/>
+    <circle cx="128" cy="24" r="1"/>
+    <circle cx="140" cy="45" r="0.9"/>
+    <circle cx="158" cy="30" r="1"/>
+  </g>
+</svg>

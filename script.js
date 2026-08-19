@@ -80,15 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ==================== MUSIC PLAYER DEMO ====================
   const playBtns = document.querySelectorAll('.play-btn');
-  let isPlaying = false;
   
   playBtns.forEach(btn => {
     btn.addEventListener('click', function() {
-      isPlaying = !isPlaying;
+      const musicInner = this.closest('.music-inner');
+      const isPlaying = musicInner ? musicInner.classList.toggle('playing') : false;
       this.textContent = isPlaying ? '⏸' : '▶';
       
       // Animate progress bar
-      const progressBars = document.querySelectorAll('.progress');
+      const progressBars = this.closest('.music-inner, .design2-section')?.querySelectorAll('.progress') || [];
       progressBars.forEach(bar => {
         if (isPlaying) {
           bar.style.animation = 'progressAnim 30s linear infinite';

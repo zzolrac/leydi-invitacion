@@ -4,10 +4,12 @@ Landing page de invitación de boda con dos propuestas de diseño para presentar
 
 ## Propuestas
 
-### Propuesta 1: Azul Romántico
-- Paleta de colores azul royal y dorado
-- Estilo floral y clásico
-- Decoraciones con flores acuarela
+### Propuesta 1: Azul Romántico Artesanal
+- Paleta de colores azul royal, plata y dorado
+- Estilo tarjeta de invitación formal con doble marco ornamental
+- Textura de papel, flores de acuarela SVG, caligrafía (Pinyon Script, Parisienne, Italiana)
+- Decoraciones artesanales: guirnalda, ramas de arrayán, divisor dorado, marco en arco
+- Secciones detalladas: ceremonia, recepción, itinerario, etiqueta con paleta de colores, regalos, RSVP
 
 ### Propuesta 2: Dorado Elegante
 - Paleta de colores dorado sobre fondo oscuro
@@ -32,20 +34,22 @@ Landing page de invitación de boda con dos propuestas de diseño para presentar
 ├── netlify.toml        # Configuración de Netlify
 ├── _redirects          # Redirecciones Netlify
 └── img/                # Carpeta de imágenes
-    ├── flores-top.svg
-    ├── flores-bottom.svg
-    ├── flores-footer.svg
+    ├── guirnalda.svg   # Guirnalda floral acuarela
+    ├── flor-esquina.svg# Arreglo floral de esquina
+    ├── divisor.svg     # Divisor ornamental dorado
+    ├── marco-arco.svg  # Marco en arco para foto
+    ├── arrayan.svg     # Rama de arrayán
     ├── foto-pareja.jpg        # Propuesta 1
     ├── foto-pareja-3.jpg      # Propuesta 2
-    └── foto-pareja-footer.jpg # Footer
+    └── foto-pareja-footer.jpg # Footer (propuesta 2)
 ```
 
 ## Personalización
 
 1. Reemplazar las imágenes en la carpeta `img/`
 2. Actualizar los datos en `index.html`:
-   - Nombres de los novios
-   - Fecha de la boda
+   - Nombres de los novios (portada, sección padres, canción)
+   - Fecha de la boda (portada, sección fecha, script.js)
    - Horarios de ceremonia y recepción
    - Números de WhatsApp (reemplazar `591XXXXXXXX`)
    - Direcciones de los locales

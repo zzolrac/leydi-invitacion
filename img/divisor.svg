@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 40" width="320" height="40" role="img" aria-label="Divisor ornamental">
+  <defs>
+    <linearGradient id="sepGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d9b566"/>
+      <stop offset="50%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#d9b566"/>
+    </linearGradient>
+  </defs>
+  <path d="M10 20 Q 80 20 135 20" fill="none" stroke="url(#sepGold)" stroke-width="1.4" stroke-opacity="0.9" stroke-linecap="round"/>
+  <path d="M185 20 Q 240 20 310 20" fill="none" stroke="url(#sepGold)" stroke-width="1.4" stroke-opacity="0.9" stroke-linecap="round"/>
+  <!-- small diamond left/right -->
+  <path d="M128 20 l8 -5 l8 5 l-8 5 z" fill="#c9a227" opacity="0.9"/>
+  <path d="M176 20 l8 -5 l8 5 l-8 5 z" fill="#c9a227" opacity="0.9"/>
+  <!-- center flower/dot -->
+  <g transform="translate(160,20)">
+    <circle cx="0" cy="0" r="6" fill="#e6dbe2"/>
+    <g fill="#c9a227" opacity="0.95">
+      <ellipse cx="0" cy="-7" rx="3.2" ry="5"/>
+      <ellipse cx="6.6" cy="-2.4" rx="3.2" ry="5" transform="rotate(72)"/>
+      <ellipse cx="6.6" cy="2.4" rx="3.2" ry="5" transform="rotate(144)"/>
+      <ellipse cx="0" cy="7" rx="3.2" ry="5" transform="rotate(216)"/>
+      <ellipse cx="-6.6" cy="2.4" rx="3.2" ry="5" transform="rotate(288)"/>
+    </g>
+    <circle cx="0" cy="0" r="2" fill="#c9a227"/>
+  </g>
+  <!-- tiny dots on lines -->
+  <circle cx="45" cy="20" r="1.6" fill="#c9a227" opacity="0.6"/>
+  <circle cx="275" cy="20" r="1.6" fill="#c9a227" opacity="0.6"/>
+</svg>
