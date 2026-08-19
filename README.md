@@ -32,11 +32,12 @@ Landing page de invitación de boda con dos propuestas de diseño para presentar
 ├── netlify.toml        # Configuración de Netlify
 ├── _redirects          # Redirecciones Netlify
 └── img/                # Carpeta de imágenes
-    ├── flores-top.png
-    ├── flores-bottom.png
-    ├── flores-footer.png
-    ├── foto-pareja.jpg
-    └── foto-pareja-footer.jpg
+    ├── flores-top.svg
+    ├── flores-bottom.svg
+    ├── flores-footer.svg
+    ├── foto-pareja.jpg        # Propuesta 1
+    ├── foto-pareja-3.jpg      # Propuesta 2
+    └── foto-pareja-footer.jpg # Footer
 ```
 
 ## Personalización
@@ -50,28 +51,31 @@ Landing page de invitación de boda con dos propuestas de diseño para presentar
    - Direcciones de los locales
    - Datos bancarios para regalos
 
-## Despliegue en Netlify
+## URLs
+
+- **Demo (Netlify):** https://leydi-invitacion.netlify.app
+- **Repositorio (GitHub):** https://github.com/zzolrac/leydi-invitacion
+- **Admin Netlify:** https://app.netlify.com/projects/leydi-invitacion
+
+## Despliegue
 
 ```bash
-# Instalar Netlify CLI
-npm install -g netlify-cli
+# GitHub
+git add . && git commit -m "cambios" && git push
 
-# Login
-netlify login
+# Netlify (producción)
+netlify deploy --prod --dir .
 
-# Init
-netlify init
-
-# Deploy
-netlify deploy --prod
+# Preview (link temporal)
+netlify deploy --dir .
 ```
 
-## GitHub
+## Comprimir imágenes
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: Wedding invitation landing page"
-git remote add origin https://github.com/USUARIO/REPO.git
-git push -u origin main
+Existe el script `compress.ps1` (excluido del repo). Para usarlo:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File compress.ps1
 ```
+
+Redimensiona los JPEG de `img/` a un ancho máximo de 1300px con calidad 76.
